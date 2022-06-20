@@ -1,8 +1,6 @@
 import xml.etree.ElementTree as ET
 import xmltodict
-import json
 import os
-import re
 """ 
     Parse xml file from "data_to_parse", and put data into MySQL.
     Change 
@@ -11,9 +9,6 @@ import re
 """
 class xml2mysql():
     def __init__(self):
-        """
-        :param time: %m%d%H%M
-        """
         file_to_parse = os.listdir("data_to_parse")
 
     def parse(self):

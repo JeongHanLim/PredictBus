@@ -4,7 +4,7 @@ TIME_INTERVAL_SEC = 300
 
 class MyThread(Thread):
     def __init__(self, event):
-        Thread.__init__()
+        Thread.__init__(self)
         self.stopped = event
 
     def run(self):

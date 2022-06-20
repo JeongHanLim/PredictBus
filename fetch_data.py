@@ -37,11 +37,11 @@ class api_call(object):
         #판교도서관:206000004
         while True:
             if int(time.time()) % TIME_INTERVAL_SEC == 0:
-            for station_id in self.station_ids:
-                key = self.encode_key
-                url = "http://apis.data.go.kr/6410000/busarrivalservice/getBusArrivalList?serviceKey={}&stationId={}".format(key,station_id)
-                response = requests.get(url).content
-                current_time = str(datetime.now().strftime("%H:%M"))
+                for station_id in self.station_ids:
+                    key = self.encode_key
+                    url = "http://apis.data.go.kr/6410000/busarrivalservice/getBusArrivalList?serviceKey={}&stationId={}".format(key,station_id)
+                    response = requests.get(url).content
+                    current_time = str(datetime.now().strftime("%H:%M"))
                     with open("data_to_parse/"+current_time+"_"+str(station_id)+".txt", "wb") as f:
                        f.write(response)
         return
