@@ -1,4 +1,4 @@
-from fetch_data import api_call
+from fetch_data import Api_Call
 from threading import Thread
 TIME_INTERVAL_SEC = 300
 
